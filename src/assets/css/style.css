@@ -256,16 +256,6 @@ section {
   gap: 1rem;
 }
 
-/* BUTTONS */
-.btn-color-1:hover~.btn-color-2 {
-  background-color: white;
-  color: black;
-}
-
-.btn-color-2:hover~.btn-color-1 {
-    background-color: black;
-}
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -301,16 +291,6 @@ section {
 }
 
 
-
-.btn-color-1:hover {
-  background-color: black;
-  color: white;
-}
-
-.btn-color-2:hover {
-  background-color: white;
-  color: black;
-}
 
 
 
