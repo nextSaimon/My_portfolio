@@ -21,7 +21,7 @@ const Contact = () => {
         }
     ]
     return (
-        <section id="projects">
+        <section id="projects" style={{ overflow: 'hidden' }}>
             <p className="section__text__p1">Browse My Recent</p>
             <h1 className="title">Projects</h1>
             <div className="experience-details-container">

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Saimon's Portfolio</title>
+  <title>SAIMON</title>
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
   <meta name="description"
     content="Welcome to Saimon's portfolio! Discover my skills in web development, design, and programming. Explore my projects and learn more about my work." />
@@ -23,12 +23,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
-
+  <!-- <link rel="stylesheet" href="/node_modules/aos/dist/aos.css"> -->
+  <link rel="stylesheet" href="./aso/aos.css">
 </head>
 
 <body>
   <div id="root"></div>
+
   <script type="module" src="/src/main.jsx"></script>
+
+  <script src="./aso/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 0,
+      mirror: true,
+    });
+  </script>
 </body>
 
 </html>
