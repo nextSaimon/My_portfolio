@@ -16,7 +16,7 @@ const Contact = () => {
             <div className="contact-info-upper-container" data-aos="zoom-in">
                 <div className="contact-info-container">
                     <i className="fab fa-facebook icon contact-icon" data-aos="fade-left"></i>
-                    <p data-aos="fade-right"><a href="https://www.facebook.com/next.saimon" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+                    <p data-aos="fade-right"><a href="https://www.facebook.com/next.saimon" target="_blank" rel="noopener noreferrer">Facebook</a></p> <b>||</b>
                     <i className="fab fa-instagram icon contact-icon" data-aos="fade-left"></i>
                     <p data-aos="fade-right"><a href="https://www.instagram.com/next.saimon/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
                 </div>

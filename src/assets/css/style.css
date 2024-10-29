@@ -25,8 +25,7 @@ p {
 .fa-solid,
 .fa-regular {
   font-size: 1.5rem;
-  height: auto;
-  vertical-align: middle;
+ 
 }
 
 .fa-facebook,
@@ -107,6 +106,11 @@ a:hover {
 
 .logo:hover {
   cursor: default;
+}
+
+.nav-links li,
+.menu-links li {
+  cursor: pointer;
 }
 
 /* HAMBURGER MENU */
@@ -384,31 +388,31 @@ article .icon {
   position: relative;
 }
 
-.color-container {
+.card {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+.img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
-.project-title {
-  margin: 1rem;
-  color: black;
+img {
+  transition: transform ease 700ms;
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-  background-color: white;
+.card:hover img {
+  transform: scale(1.05);
 }
 
-.project-btn:hover {
-  color: white;
-  background-color: black;
+.btn {
+  padding: 10px;
 }
 
 /* CONTACT */
