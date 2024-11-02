@@ -27,7 +27,7 @@ const Navbar = () => {
         <div id='Home'>
             {/* Desktop Navbar */}
             <nav id="desktop-nav">
-                <div className="logo" data-aos="fade-right">SAIMON</div>
+                <div className="logo" data-aos="fade-right" onClick={() => handleNavClick('Home')}>SAIMON</div>
                 <ul className="nav-links" data-aos="fade-left">
                     <li><a onClick={() => handleNavClick('Home')}>Home</a></li>
                     <li><a onClick={() => handleNavClick('about')}>About</a></li>
