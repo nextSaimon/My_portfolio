@@ -102,10 +102,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-}
-
-.logo:hover {
-  cursor: default;
+  cursor: pointer;
 }
 
 .nav-links li,
