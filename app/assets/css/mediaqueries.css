@@ -58,14 +58,14 @@
 }
 
 @media screen and (max-width: 600px) {
-
   #contact,
   footer {
     height: 40vh;
   }
 
   #profile {
-    height: 83vh;
+    height: 50vh;
+    margin-top: -5%;
     margin-bottom: 0;
   }
 
@@ -108,9 +108,12 @@
   }
 
   .section__pic-container {
-    width: auto;
+    width: 46vw;
+    /* 46% of the viewport width */
     height: 46vw;
+    /* Maintain aspect ratio */
     justify-content: center;
+    align-items: center;
   }
 
   .section__text__p2 {

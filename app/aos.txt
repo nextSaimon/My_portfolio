@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 0,
+      mirror: true,
+    });
+  </script>
+
+
+
+  <Button
+                    text="GitHub"
+                    link={project.github}
+                    className="btn btn-outline-dark me-2 mt-2"
+                    style={{ borderRadius: 50 }}
+                  />
+                  <Button
+                    text="Live Demo"
+                    link={project.demo}
+                    className="btn btn-outline-dark mt-2"
+                    style={{ borderRadius: 50 }}
+                  />
