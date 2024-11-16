@@ -1,6 +1,10 @@
 # My Portfolio Website's Code
 
-My portfolio website's codes are here. Explore and See How I made my Portfolio Website!
+My portfolio website's codes are here. Explore and see how I made my portfolio website!
+
+## Live Website
+
+Check out my portfolio: [saimon.wuaze.com](https://saimon.wuaze.com/)
 
 ## It is Made With
 
