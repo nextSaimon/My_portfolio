@@ -31,7 +31,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <meta
+          name="google-site-verification"
+          content="zdUPNuU8cl5tovxUSu2ArF1BL3PuKZ1T3_yIra13vxg"
+        />
         {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
       </Head>
       <body
