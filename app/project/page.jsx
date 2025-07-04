@@ -10,6 +10,8 @@ const Project = () => {
       img: "/project-1.png",
       github: "https://github.com/nextSaimon/AOS-Helper",
       demo: "https://marketplace.visualstudio.com/items?itemName=nextsaimon.aos-helper",
+      github_button_enabled: true,
+      demo_button_enabled: true,
     },
   ];
 
@@ -45,18 +47,22 @@ const Project = () => {
                 <div className="card-body text-center mt-2">
                   <h4 className="card-title text-[23px]">{project.title}</h4>
                   <div className=" space-x-2">
-                    <Button
-                      text="GitHub"
-                      link={project.github}
-                      className=" border-[1px] px-2 py-1 w-[100px] hover:text-white hover:bg-gray-900 hover:shadow transition-all ease-in-out duration-300"
-                      style={{ borderRadius: 50 }}
-                    />
-                    <Button
-                      text="Live Demo"
-                      link={project.demo}
-                      className=" border-[1px] px-2 py-1 w-[100px] hover:text-white hover:bg-gray-900 hover:shadow transition-all ease-in-out duration-300"
-                      style={{ borderRadius: 50 }}
-                    />
+                    {project.github_button_enabled && (
+                      <Button
+                        text="GitHub"
+                        link={project.github}
+                        className=" border-[1px] px-2 py-1 w-[100px] hover:text-white hover:bg-gray-900 hover:shadow transition-all ease-in-out duration-300"
+                        style={{ borderRadius: 50 }}
+                      />
+                    )}
+                    {project.demo_button_enabled && (
+                      <Button
+                        text="Live Demo"
+                        link={project.demo}
+                        className=" border-[1px] px-2 py-1 w-[100px] hover:text-white hover:bg-gray-900 hover:shadow transition-all ease-in-out duration-300"
+                        style={{ borderRadius: 50 }}
+                      />
+                    )}
                   </div>
                 </div>
               </div>

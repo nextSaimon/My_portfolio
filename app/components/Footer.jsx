@@ -44,7 +44,8 @@ const Footer = () => {
         </ul>
       </nav>
       <p data-aos="zoom-in-up" data-aos-offset="0" data-aos-duration="200">
-        &#169; 2024 Saimon. All Rights Reserved.
+        {/* update the year every new year */}
+        &#169; {new Date().getFullYear()} Saimon. All Rights Reserved.
       </p>
     </footer>
   );
