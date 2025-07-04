@@ -10,8 +10,36 @@ const Project = () => {
       img: "/project-1.png",
       github: "https://github.com/nextSaimon/AOS-Helper",
       demo: "https://marketplace.visualstudio.com/items?itemName=nextsaimon.aos-helper",
-      github_button_enabled: true,
-      demo_button_enabled: true,
+    },
+    {
+      title: "Password Combinator",
+      img: "/project-2.png",
+      github: "https://github.com/nextSaimon/password-combinator",
+      demo: "",
+    },
+    {
+      title: "Minecraft Colab Server",
+      img: "/project-3.png",
+      github: "https://github.com/nextSaimon/minecraft-colab-server",
+      demo: "https://colab.research.google.com/github/nextSaimon/minecraft-colab-server/blob/main/Minecraft_hosting.ipynb",
+    },
+    {
+      title: "Gmail to Telegram Bot",
+      img: "/project-4.png",
+      github: "https://github.com/nextSaimon/Gmail-to-Telegram-Bot",
+      demo: "",
+    },
+    {
+      title: "Notes-Viewer",
+      img: "/project-5.png",
+      github: "https://github.com/nextSaimon/Notes-Viewer",
+      demo: "",
+    },
+    {
+      title: "Auto Wifi Changer",
+      img: "/project-6.png",
+      github: "https://github.com/nextSaimon/Auto_Wifi_Changer",
+      demo: "",
     },
   ];
 
@@ -35,19 +63,21 @@ const Project = () => {
                 data-aos="fade-up"
               >
                 <div className="img">
-                  <Image
-                    className="card-img-top"
-                    src={project.img}
-                    alt={project.title}
-                    width={500}
-                    height={300}
-                  />
+                  {project.img && (
+                    <Image
+                      className="card-img-top"
+                      src={project.img}
+                      alt={project.title}
+                      width={500}
+                      height={300}
+                    />
+                  )}
                 </div>
 
                 <div className="card-body text-center mt-2">
                   <h4 className="card-title text-[23px]">{project.title}</h4>
                   <div className=" space-x-2">
-                    {project.github_button_enabled && (
+                    {project.github && (
                       <Button
                         text="GitHub"
                         link={project.github}
@@ -55,7 +85,7 @@ const Project = () => {
                         style={{ borderRadius: 50 }}
                       />
                     )}
-                    {project.demo_button_enabled && (
+                    {project.demo && (
                       <Button
                         text="Live Demo"
                         link={project.demo}
