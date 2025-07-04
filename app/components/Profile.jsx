@@ -58,7 +58,7 @@ const Profile = () => {
           layout="intrinsic" // Let the image scale based on its container size
           width={400} // Default width
           height={400} // Default height
-          placeholder="blur" // Blur effect while loading
+          // placeholder="blur" // Blur effect while loading
           quality={100}
           style={{ objectFit: "cover", borderRadius: "50%" }} // Optional: rounded shape
           data-aos="fade-left"
