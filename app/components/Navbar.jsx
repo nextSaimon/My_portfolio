@@ -32,8 +32,8 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <AnimatedContent
         distance={150}
-        direction="vertical"
-        reverse={false}
+        direction="horizontal"
+        reverse={true}
         duration={1.2}
         ease="power3.out"
         initialOpacity={0.2}
