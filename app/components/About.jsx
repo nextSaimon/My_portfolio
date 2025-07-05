@@ -9,6 +9,7 @@ import FadeContent from "../assets/FadeContent/FadeContent";
 
 // Function to calculate the age
 const calculateAge = (birthDate) => {
+  // const screenWidth = window.innerWidth;
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
   const monthDiff = today.getMonth() - birthDate.getMonth();
@@ -57,17 +58,11 @@ const About = () => {
       </AnimatedContent>
       <div className="section-container justify-center">
         <div className="section__pic-container">
-          <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse={true}
-            duration={1.2}
-            ease="bounce.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={0.3}
-            threshold={0.2}
-            delay={0}
+          <FadeContent
+            blur={true}
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
           >
             <Image
               className="about-pic"
@@ -79,7 +74,7 @@ const About = () => {
               quality={100}
               style={{ objectFit: "cover" }}
             />
-          </AnimatedContent>
+          </FadeContent>
         </div>
         <div className="about-details-container">
           <AnimatedContent
