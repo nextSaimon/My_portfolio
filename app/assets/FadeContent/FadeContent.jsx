@@ -25,7 +25,7 @@ const FadeContent = ({
           }, delay);
         }
       },
-      { threshold },
+      { threshold }
     );
 
     observer.observe(ref.current);
@@ -41,6 +41,7 @@ const FadeContent = ({
         opacity: inView ? 1 : initialOpacity,
         transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
         filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
+        zIndex: "-10",
       }}
     >
       {children}

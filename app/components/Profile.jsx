@@ -47,7 +47,7 @@ const Profile = () => {
     setTimeout(() => {
       document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
     }, 100);
-    setIsMenuOpen(false); // Close the menu
+    setIsMenuOpen(false); 
   };
 
   return (
@@ -56,7 +56,7 @@ const Profile = () => {
         <AnimatedContent
           distance={150}
           direction="vertical"
-          reverse={true}
+          reverse={false}
           duration={1.2}
           ease="bounce.out"
           initialOpacity={0.2}
