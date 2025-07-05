@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import React from "react";
 import AnimatedContent from "./../assets/AnimatedContent/AnimatedContent";
 import FadeContent from "../assets/FadeContent/FadeContent";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -34,7 +35,7 @@ const Contact = () => {
 
       <AnimatedContent
         distance={150}
-        direction="horizontal" // Fixed typo: "vartical" → "vertical"
+        direction="horizontal"
         reverse={true}
         duration={1.2}
         ease="bounce.out"
@@ -43,6 +44,7 @@ const Contact = () => {
         scale={0.3}
         threshold={0.2}
         delay={0}
+        Zindex={false}
       >
         <div className="contact-info-upper-container w-[350px]">
           <div className="contact-info-container">
@@ -50,14 +52,16 @@ const Contact = () => {
               <MdEmail />
             </i>
             <p>
-              <a href="mailto:saimonss5432@gmail.com">saimonss5432@gmail.com</a>
+              <Link href="mailto:saimonss5432@gmail.com">
+                saimonss5432@gmail.com
+              </Link>
             </p>
           </div>
         </div>
       </AnimatedContent>
       <AnimatedContent
         distance={150}
-        direction="horizontal" // Fixed typo: "vartical" → "vertical"
+        direction="horizontal"
         reverse={false}
         duration={1.2}
         ease="bounce.out"
@@ -66,6 +70,7 @@ const Contact = () => {
         scale={0.3}
         threshold={0.2}
         delay={0}
+        Zindex={false}
       >
         <div className="contact-info-upper-container w-[350px]">
           <div className="contact-info-container">
@@ -73,26 +78,26 @@ const Contact = () => {
               <BsFacebook />
             </i>
             <p>
-              <a
+              <Link
                 href="https://www.facebook.com/next.saimon"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook
-              </a>
+              </Link>
             </p>{" "}
             <b>||</b>
             <i className="fab fa-instagram icon contact-icon">
               <AiOutlineInstagram />
             </i>
             <p>
-              <a
+              <Link
                 href="https://www.instagram.com/next.saimon/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Instagram
-              </a>
+              </Link>
             </p>
           </div>
         </div>

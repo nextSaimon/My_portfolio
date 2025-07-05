@@ -33,7 +33,7 @@ const AnimatedContent = ({
       [axis]: offset,
       scale,
       opacity: animateOpacity ? initialOpacity : 1,
-      zIndex: Zindex ? -10 : 0,
+      zIndex: Zindex ? -10 : 1,
     });
 
     gsap.to(el, {
