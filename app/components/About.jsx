@@ -33,60 +33,112 @@ const About = () => {
 
   return (
     <section id="about" style={{ overflow: "hidden" }}>
-      <p className="section__text__p1 ">Get To Know More</p>
-      <h1 className="title">About Me</h1>
-      <div className="section-container">
+      <AnimatedContent
+        distance={150}
+        direction="vertical" 
+        reverse={true}
+        duration={1.2}
+        ease="bounce.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={0.3}
+        threshold={0.2}
+        delay={0}
+      >
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+        >
+          <p className="section__text__p1 ">Get To Know More</p>
+          <h1 className="title">About Me</h1>
+        </FadeContent>
+      </AnimatedContent>
+      <div className="section-container justify-center">
         <div className="section__pic-container">
-          <Image
-            className="about-pic"
-            src={about_img}
-            alt="Saimon's Profile"
-            layout="intrinsic"
-            width={400}
-            height={400}
-            placeholder="blur"
-            quality={100}
-            style={{ objectFit: "cover" }}
-          />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={true}
+            duration={1.2}
+            ease="bounce.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={0.3}
+            threshold={0.2}
+            delay={0}
+          >
+            <Image
+              className="about-pic"
+              src={about_img}
+              alt="Saimon's Profile"
+              width={400}
+              height={400}
+              placeholder="blur"
+              quality={100}
+              style={{ objectFit: "cover" }}
+            />
+          </AnimatedContent>
         </div>
         <div className="about-details-container">
-          <div className="about-containers  w-[100px] mx-auto">
-            <div className="details-container text-center ">
-              <i className="fas fa-briefcase icon">
-                <FaBriefcase className="mx-auto" />
-              </i>
-              <h3>Experience</h3>
-              <p>
-                {experience}+ years <br />
-                Frontend Development <br /> Other skill+
-              </p>
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={true}
+            duration={1.2}
+            ease="bounce.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={0.3}
+            threshold={0.2}
+            delay={0}
+          >
+            <div className="about-containers mx-auto">
+              <div className="details-container text-center ">
+                <i className="fas fa-briefcase icon">
+                  <FaBriefcase className="mx-auto" />
+                </i>
+                <h3>Experience</h3>
+                <p>
+                  {experience}+ years <br />
+                  Frontend Development <br /> Other skill+
+                </p>
+              </div>
+              {/* <div className="details-container">
+                <i className="fas fa-graduation-cap icon">
+                  <FaGraduationCap className="mx-auto" />
+                </i>
+                <h3>Education</h3>
+                <p>
+                  SSC 2023
+                  <br />
+                  HSC 2025
+                </p>
+              </div> */}
             </div>
-            {/* <div className="details-container">
-              <i className="fas fa-graduation-cap icon">
-                <FaGraduationCap className="mx-auto" />
-              </i>
-              <h3>Education</h3>
+          </AnimatedContent>
+          <FadeContent
+            blur={true}
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <div className="text-container">
+              <p>It&apos;s me......</p>
+              <h1> Saimon 🙋‍♂️</h1>
+              <p>💻 A junior frontend developer. 🌐</p>
+              <p>🧭 I live in Dhaka, Bangladesh.</p>
               <p>
-                SSC 2023
-                <br />
-                HSC 2025
+                ⌛ I am <b>{age}</b> years old.
               </p>
-            </div> */}
-          </div>
-          <div className="text-container">
-            <p>It&apos;s me......</p>
-            <h1> Saimon 🙋‍♂️</h1>
-            <p>💻 A junior frontend developer. 🌐</p>
-            <p>🧭 I live in Dhaka, Bangladesh.</p>
-            <p>
-              ⌛ I am <b>{age}</b> years old.
-            </p>
-            <p>
-              🤓 I am learning 🌐 Web Development, and I can also edit 📷
-              photos, 📽️ videos, Word, Excel, etc.
-            </p>
-            <p>⚡ Fun fact: I started coding at 13!</p>
-          </div>
+              <p>
+                🤓 I am learning 🌐 Web Development, and I can also edit 📷
+                photos, 📽️ videos, Word, Excel, etc.
+              </p>
+              <p>⚡ Fun fact: I started coding at 13!</p>
+            </div>
+          </FadeContent>
         </div>
       </div>
     </section>

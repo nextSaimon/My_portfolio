@@ -140,7 +140,7 @@ const Experience = () => {
     <section id="experience" style={{ overflow: "hidden" }}>
       <AnimatedContent
         distance={150}
-        direction="vertical" // Fixed typo: "vartical" → "vertical"
+        direction="vertical"
         reverse={true}
         duration={1.2}
         ease="bounce.out"
@@ -150,13 +150,20 @@ const Experience = () => {
         threshold={0.2}
         delay={0}
       >
-        <p className="section__text__p1">Explore My</p>
-        <h1 className="title">Experience</h1>
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+        >
+          <p className="section__text__p1">Explore My</p>
+          <h1 className="title">Experience</h1>
+        </FadeContent>
       </AnimatedContent>
 
       <div className="experience-details-container">
-        <div className="about-containers">
-          <div className="details-container">
+        <div className="about-containers justify-center">
+          <div className="details-container max-w-[600px]">
             <AnimatedContent
               distance={150}
               direction="horizontal"
