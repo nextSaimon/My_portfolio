@@ -125,6 +125,7 @@ const Experience = () => {
         threshold={0.2}
         delay={0}
         key={index}
+        Zindex={false}
       >
         <article>
           <i className={skill.class}>{skill.icon}</i>
