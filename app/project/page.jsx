@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../components/button";
-import Navbar from "../components/Navbar";
 import AnimatedContent from "../assets/AnimatedContent/AnimatedContent";
 import FadeContent from "../assets/FadeContent/FadeContent";
 
@@ -56,7 +55,6 @@ const Project = () => {
 
   return (
     <div id="projects" className="overflow-hidden flex flex-col">
-      <Navbar />
       <AnimatedContent
         distance={150}
         direction="vertical"
@@ -80,7 +78,7 @@ const Project = () => {
         </FadeContent>
       </AnimatedContent>
       <div className="container my-5 mx-auto">
-        <div className="flex justify-center flex-wrap gap-3 w-full max-w-5xl mx-auto">
+        <div className="flex justify-center flex-wrap gap-3 w-full max-w-5xl mx-auto relative z-[-1]">
           {projects.map((project, index) => (
             <div className="w-full max-w-xs" key={index}>
               <AnimatedContent

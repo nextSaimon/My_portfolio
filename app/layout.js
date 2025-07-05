@@ -35,13 +35,13 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="zdUPNuU8cl5tovxUSu2ArF1BL3PuKZ1T3_yIra13vxg"
         />
-        {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Navbar className="z-50" /> */}
+        <Navbar className="z-50" />
         {children}
+        <Footer />
       </body>
     </html>
   );
