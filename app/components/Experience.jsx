@@ -190,7 +190,7 @@ const Experience = () => {
               {renderSkills(frontendSkills)}
             </div>
           </div>
-          <div className="details-container">
+          <div className="details-container max-w-[600px]">
             <AnimatedContent
               distance={150}
               direction="horizontal"
