@@ -49,14 +49,10 @@ const Navbar = () => {
           initialOpacity={0}
         >
           <nav id="desktop-nav">
-            <div
-              className="logo"
-              data-aos="fade-right"
-              onClick={() => handleNavClick("Home")}
-            >
+            <div className="logo" onClick={() => handleNavClick("Home")}>
               SAIMON
             </div>
-            <ul className="nav-links" data-aos="fade-left">
+            <ul className="nav-links">
               <li>
                 <a onClick={() => handleNavClick("Home")}>Home</a>
               </li>
@@ -98,10 +94,8 @@ const Navbar = () => {
           initialOpacity={0}
         >
           <nav id="hamburger-nav">
-            <div className="logo" data-aos="fade-right">
-              SAIMON
-            </div>
-            <div className="hamburger-menu" data-aos="fade-left">
+            <div className="logo">SAIMON</div>
+            <div className="hamburger-menu">
               <div
                 className={`hamburger-icon ${isMenuOpen ? "open" : ""}`}
                 onClick={toggleMenu}
@@ -111,7 +105,13 @@ const Navbar = () => {
                 <span></span>
               </div>
 
-              <ul className={`menu-links ${isMenuOpen ? "open" : ""}`}>
+              <ul
+                className={`menu-links ${
+                  isMenuOpen
+                    ? "open  border border-gray-400 rounded-[10px]"
+                    : ""
+                }`}
+              >
                 <li>
                   <a onClick={() => handleNavClick("Home")}>Home</a>
                 </li>
