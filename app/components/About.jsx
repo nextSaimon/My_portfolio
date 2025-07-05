@@ -35,7 +35,7 @@ const About = () => {
     <section id="about" style={{ overflow: "hidden" }}>
       <AnimatedContent
         distance={150}
-        direction="vertical" 
+        direction="vertical"
         reverse={true}
         duration={1.2}
         ease="bounce.out"
@@ -102,7 +102,7 @@ const About = () => {
                 <h3>Experience</h3>
                 <p>
                   {experience}+ years <br />
-                  Frontend Development <br /> Other skill+
+                  Full Stack Development <br /> Other skill+
                 </p>
               </div>
               {/* <div className="details-container">

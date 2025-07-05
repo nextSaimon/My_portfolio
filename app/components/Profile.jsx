@@ -120,7 +120,7 @@ const Profile = () => {
           threshold={0.2}
           delay={0}
         >
-          <p className="section__text__p2">Frontend Developer</p>
+          <p className="section__text__p2">Full Stack Developer</p>
         </AnimatedContent>
         <div className="btn-container">
           <AnimatedContent
