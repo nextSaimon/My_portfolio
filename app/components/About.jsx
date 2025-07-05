@@ -1,8 +1,11 @@
+"use client";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
 import Image from "next/image";
 import React from "react";
 import about_img from "@/public/about-pic.jpg";
+import AnimatedContent from "./../assets/AnimatedContent/AnimatedContent";
+import FadeContent from "../assets/FadeContent/FadeContent";
 
 // Function to calculate the age
 const calculateAge = (birthDate) => {
@@ -30,16 +33,8 @@ const About = () => {
 
   return (
     <section id="about" style={{ overflow: "hidden" }}>
-      <p
-        className="section__text__p1 "
-        data-aos="fade-up-right"
-        data-aos-offset="40"
-      >
-        Get To Know More
-      </p>
-      <h1 className="title" data-aos="fade-up-left" data-aos-offset="40">
-        About Me
-      </h1>
+      <p className="section__text__p1 ">Get To Know More</p>
+      <h1 className="title">About Me</h1>
       <div className="section-container">
         <div className="section__pic-container">
           <Image
@@ -53,19 +48,10 @@ const About = () => {
             quality={100}
             style={{ objectFit: "cover" }}
           />
-          {/* <img
-            src="about-pic.jpg"
-            alt=""
-            data-aos="zoom-in-up"
-            className="about-pic"
-          /> */}
         </div>
         <div className="about-details-container">
           <div className="about-containers  w-[100px] mx-auto">
-            <div
-              className="details-container text-center "
-              data-aos="fade-up-right"
-            >
+            <div className="details-container text-center ">
               <i className="fas fa-briefcase icon">
                 <FaBriefcase className="mx-auto" />
               </i>
@@ -75,7 +61,7 @@ const About = () => {
                 Frontend Development <br /> Other skill+
               </p>
             </div>
-            {/* <div className="details-container" data-aos="fade-up-left">
+            {/* <div className="details-container">
               <i className="fas fa-graduation-cap icon">
                 <FaGraduationCap className="mx-auto" />
               </i>
@@ -87,7 +73,7 @@ const About = () => {
               </p>
             </div> */}
           </div>
-          <div className="text-container" data-aos="fade-left">
+          <div className="text-container">
             <p>It&apos;s me......</p>
             <h1> Saimon 🙋‍♂️</h1>
             <p>💻 A junior frontend developer. 🌐</p>

@@ -10,8 +10,15 @@
     "export": "next export"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tailwindcss/postcss": "^4.1.11",
     "aos": "^2.3.4",
+    "autoprefixer": "^10.4.21",
     "framer-motion": "^12.23.0",
+    "gsap": "^3.13.0",
     "matter-js": "^0.20.0",
     "next": "^15.0.3",
     "react": "^18.2.0",

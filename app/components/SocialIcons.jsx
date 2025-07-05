@@ -1,22 +1,18 @@
-import { BsGithub } from "react-icons/bs"; 
-import { BsFacebook } from "react-icons/bs"; 
-import { AiOutlineInstagram } from "react-icons/ai"; 
+import { BsGithub } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+import { AiOutlineInstagram } from "react-icons/ai";
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 const SocialIcons = () => {
   return (
-    <div
-      id="socials-container"
-      data-aos="fade-down"
-      
-    >
+    <div id="socials-container">
       <i
         className="fab fa-facebook icon"
         onClick={() =>
           window.open("https://www.facebook.com/next.saimon", "_blank")
         }
       >
-       <BsFacebook />
+        <BsFacebook />
       </i>
       <i
         className="fab fa-instagram icon"
@@ -24,7 +20,6 @@ const SocialIcons = () => {
           window.open("https://www.instagram.com/next.saimon/", "_blank")
         }
       >
-
         <AiOutlineInstagram />
       </i>
       <i

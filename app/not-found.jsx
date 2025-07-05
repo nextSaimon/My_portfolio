@@ -13,10 +13,10 @@ export default function Custom404() {
             text={`Oops! Looks like this page got lost in cyberspace... 404 !`}
             highlightWords={["Oops", "404", "React Bits", "Page Not Found"]}
             highlightClass="text-cyan-500 font-bold"
-            trigger="hover"
+            trigger="auto"
             backgroundColor="transparent"
             wireframes={false}
-            gravity={0.3}
+            gravity={0.01}
             fontSize="1.8rem"
             mouseConstraintStiffness={0.9}
           />
@@ -27,7 +27,7 @@ export default function Custom404() {
       <div className="relative z-20 max-w-md w-full p-8 bg-gray-100 shadow-2xl rounded-2xl text-center">
         <h1 className="text-6xl font-extrabold text-indigo-600">404</h1>
         <DecryptedText
-          text="Oops! The page you're looking for doesn't exist."
+          text="Oops! This page doesn&#39;t exist."
           speed={30}
           maxIterations={150}
           revealDirection="center"
@@ -50,10 +50,11 @@ export default function Custom404() {
           parentClassName="relative"
           sequential={true}
         />
-        <Link href="/" passHref legacyBehavior>
-          <a className="mt-6 inline-block px-6 py-3 text-white font-semibold bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all duration-300">
-            Go back to Home
-          </a>
+        <Link
+          href={"/"}
+          className="mt-6 inline-block px-6 py-3 text-white font-semibold bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all duration-300"
+        >
+          Go back to Home
         </Link>
       </div>
     </div>

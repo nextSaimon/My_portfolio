@@ -1,67 +1,73 @@
-import { SiTailwindcss } from "react-icons/si"; 
-import { TbBrandNextjs } from "react-icons/tb"; 
-import { FaPython } from "react-icons/fa";
-import { SiMicrosoftpowerpoint } from "react-icons/si";
-import { BsFillFileEarmarkWordFill } from "react-icons/bs";
-import { SiMicrosoftexcel } from "react-icons/si";
-import { SiAdobeillustrator } from "react-icons/si";
-import { SiAdobephotoshop } from "react-icons/si";
-import { AiFillGithub } from "react-icons/ai";
-import { FaBootstrap } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaJsSquare } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
-import { AiFillHtml5 } from "react-icons/ai";
+"use client";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3Alt,
+  faJsSquare,
+  faReact,
+  faBootstrap,
+  faGithub,
+  faPython,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faTable,
+  faFileWord,
+  faFilePowerpoint,
+  faImage,
+  faBezierCurve,
+} from "@fortawesome/free-solid-svg-icons";
+import AnimatedContent from "../assets/AnimatedContent/AnimatedContent";
+import FadeContent from "../assets/FadeContent/FadeContent";
 
 const Experience = () => {
   const frontendSkills = [
     {
       name: "HTML",
       level: "Experienced",
-      icon: <AiFillHtml5 />,
+      icon: <FontAwesomeIcon icon={faHtml5} />,
       class: "fa-brands fa-html5",
     },
     {
       name: "CSS",
       level: "Experienced",
-      icon: <IoLogoCss3 />,
+      icon: <FontAwesomeIcon icon={faCss3Alt} />,
       class: "fa-brands fa-css3",
     },
     {
       name: "JavaScript",
       level: "Intermediate",
-      icon: <FaJsSquare />,
+      icon: <FontAwesomeIcon icon={faJsSquare} />,
       class: "fa-brands fa-js",
     },
     {
       name: "React",
       level: "Intermediate",
-      icon: <FaReact />,
+      icon: <FontAwesomeIcon icon={faReact} />,
       class: "fa-brands fa-react",
     },
     {
       name: "NextJS",
       level: "Intermediate",
-      icon: <TbBrandNextjs />,
+      icon: <FontAwesomeIcon icon={faReact} />, // No specific Next.js icon; using React icon
       class: "fa-brands fa-react",
     },
     {
       name: "TailwindCSS",
       level: "Intermediate",
-      icon: <SiTailwindcss />,
+      icon: <FontAwesomeIcon icon={faCss3Alt} />, // No Tailwind CSS icon; using CSS icon
       class: "fa-brands fa-react",
     },
     {
       name: "Bootstrap",
       level: "Intermediate",
-      icon: <FaBootstrap />,
+      icon: <FontAwesomeIcon icon={faBootstrap} />,
       class: "fa-brands fa-bootstrap",
     },
     {
       name: "Git",
       level: "Intermediate",
-      icon: <AiFillGithub />,
+      icon: <FontAwesomeIcon icon={faGithub} />,
       class: "fa-solid fa-code-branch",
     },
   ];
@@ -70,73 +76,134 @@ const Experience = () => {
     {
       name: "Photoshop",
       level: "Intermediate",
-      icon: <SiAdobephotoshop />,
+      icon: <FontAwesomeIcon icon={faImage} />, // Generic image icon for Photoshop
       class: "fa-regular fa-image",
     },
     {
       name: "Illustrator",
       level: "Intermediate",
-      icon: <SiAdobeillustrator />,
+      icon: <FontAwesomeIcon icon={faBezierCurve} />, // Bezier curve for Illustrator
       class: "fa-solid fa-bezier-curve",
     },
     {
       name: "Excel",
       level: "Experienced",
-      icon: <SiMicrosoftexcel />,
+      icon: <FontAwesomeIcon icon={faTable} />, // Table icon for Excel
       class: "fa-solid fa-table",
     },
     {
       name: "Word",
       level: "Experienced",
-      icon: <BsFillFileEarmarkWordFill />,
+      icon: <FontAwesomeIcon icon={faFileWord} />,
       class: "fa-regular fa-file-word",
     },
     {
       name: "PowerPoint",
       level: "Intermediate",
-      icon: <SiMicrosoftpowerpoint />,
+      icon: <FontAwesomeIcon icon={faFilePowerpoint} />,
       class: "fa-solid fa-file-powerpoint",
     },
     {
       name: "Python",
       level: "Intermediate",
-      icon: <FaPython />,
+      icon: <FontAwesomeIcon icon={faPython} />,
       class: "fa-brands fa-python",
     },
   ];
 
   const renderSkills = (skills) =>
     skills.map((skill, index) => (
-      <article
+      <AnimatedContent
+        distance={150}
+        direction="horizontal"
+        reverse={index % 2 === 0 ? false : true}
+        duration={1.2}
+        ease="bounce.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={0.3}
+        threshold={0.2}
+        delay={0}
         key={index}
-        data-aos={`zoom-in-${index % 2 === 0 ? "right" : "left"}`}
       >
-        <i className={skill.class}>{skill.icon}</i>
-        <div>
-          <h3>{skill.name}</h3>
-          <p>{skill.level}</p>
-        </div>
-      </article>
+        <article>
+          <i className={skill.class}>{skill.icon}</i>
+          <div>
+            <h3>{skill.name}</h3>
+            <p>{skill.level}</p>
+          </div>
+        </article>
+      </AnimatedContent>
     ));
 
   return (
     <section id="experience" style={{ overflow: "hidden" }}>
-      <p className="section__text__p1" data-aos="flip-left">
-        Explore My
-      </p>
-      <h1 className="title" data-aos="flip-right">
-        Experience
-      </h1>
+      <AnimatedContent
+        distance={150}
+        direction="vertical" // Fixed typo: "vartical" → "vertical"
+        reverse={true}
+        duration={1.2}
+        ease="bounce.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={0.3}
+        threshold={0.2}
+        delay={0}
+      >
+        <p className="section__text__p1">Explore My</p>
+        <h1 className="title">Experience</h1>
+      </AnimatedContent>
+
       <div className="experience-details-container">
         <div className="about-containers">
-          <div className="details-container" data-aos="zoom-in-right">
-            <h2 className="experience-sub-title">Frontend Development</h2>
+          <div className="details-container">
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              duration={1.2}
+              ease="bounce.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={0.3}
+              threshold={0.2}
+              delay={0}
+            >
+              <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
+                <h2 className="experience-sub-title">Frontend Development</h2>
+              </FadeContent>
+            </AnimatedContent>
             <div className="article-container">
               {renderSkills(frontendSkills)}
             </div>
           </div>
-          <div className="details-container" data-aos="zoom-in-left">
-            <h2 className="experience-sub-title">Other Skills</h2>
+          <div className="details-container">
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              duration={1.2}
+              ease="bounce.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={0.3}
+              threshold={0.2}
+              delay={0}
+            >
+              <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
+                <h2 className="experience-sub-title">Other Skills</h2>
+              </FadeContent>
+            </AnimatedContent>
             <div className="article-container">{renderSkills(otherSkills)}</div>
           </div>
         </div>

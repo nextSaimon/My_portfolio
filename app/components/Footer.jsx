@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer style={{ overflow: "hidden" }}>
       <nav>
-        <ul className="nav-links" data-aos="fade-up">
+        <ul className="nav-links">
           <li style={{ cursor: "pointer" }}>
             <a onClick={() => handleFooterClick("Home")}>Home</a>
           </li>
@@ -43,7 +43,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <p data-aos="zoom-in-up" data-aos-offset="0" data-aos-duration="200">
+      <p>
         {/* update the year every new year */}
         &#169; {new Date().getFullYear()} Saimon. All Rights Reserved.
       </p>
