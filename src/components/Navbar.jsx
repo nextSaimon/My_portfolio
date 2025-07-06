@@ -1,34 +1,67 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Use this for client-side navigation in the app directory
+import { useRouter } from "next/navigation";
 import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
 import FadeContent from "@/styles/FadeContent/FadeContent";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const navRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // General function to handle navigation and scrolling to a specific section
+  // Handle clicks outside the navbar and scroll events to close the menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMenuOpen &&
+        navRef.current &&
+        !navRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll, true);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll, true);
+    };
+  }, [isMenuOpen]);
+
+  // Update z-index for projects section
+  useEffect(() => {
+    const projectsElement = document.getElementById("projects");
+    if (projectsElement) {
+      projectsElement.style.zIndex = isMenuOpen ? "-1" : "0";
+    }
+  }, [isMenuOpen]);
+
   const handleNavClick = (targetId) => {
     if (router.pathname !== "/") {
-      // If not on the home page, navigate to home first
       router.push("/");
     }
-    // Scroll to target element after a short delay
     setTimeout(() => {
       document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
     }, 100);
-    setIsMenuOpen(false); // Close the menu
+    setIsMenuOpen(false);
   };
 
   return (
-    <div id="Home" className="z-[1000]">
+    <div id="Home" className="z-[1000]" ref={navRef}>
       {/* Desktop Navbar */}
       <AnimatedContent
         distance={150}
@@ -104,10 +137,9 @@ const Navbar = () => {
                 <span></span>
                 <span></span>
               </div>
-
               <ul
                 className={`menu-links ${
-                  isMenuOpen ? "open  border border-gray-400" : ""
+                  isMenuOpen ? "open border border-gray-400" : ""
                 }`}
               >
                 <li>
