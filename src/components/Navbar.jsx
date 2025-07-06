@@ -138,8 +138,10 @@ const Navbar = () => {
                 <span></span>
               </div>
               <ul
-                className={`menu-links ${
-                  isMenuOpen ? "open border border-gray-400" : ""
+                className={`menu-links transition-all duration-300 ease-in-out ${
+                  isMenuOpen
+                    ? "open border border-gray-400 opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-4 pointer-events-none"
                 }`}
               >
                 <li>
