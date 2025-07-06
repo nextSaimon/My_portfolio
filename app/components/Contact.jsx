@@ -46,7 +46,7 @@ const Contact = () => {
         delay={0}
         Zindex={false}
       >
-        <div className="contact-info-upper-container w-[350px]">
+        <div className="contact-info-upper-container max-w-[350px]">
           <div className="contact-info-container">
             <i className="fas fa-envelope icon contact-icon email-icon">
               <MdEmail />
@@ -72,7 +72,7 @@ const Contact = () => {
         delay={0}
         Zindex={false}
       >
-        <div className="contact-info-upper-container w-[350px]">
+        <div className="contact-info-upper-container max-w-[350px]">
           <div className="contact-info-container">
             <i className="fab fa-facebook icon contact-icon">
               <BsFacebook />
