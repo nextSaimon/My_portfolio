@@ -3,9 +3,9 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import React from "react";
-import AnimatedContent from "./../assets/AnimatedContent/AnimatedContent";
-import FadeContent from "../assets/FadeContent/FadeContent";
 import Link from "next/link";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 const Contact = () => {
   return (

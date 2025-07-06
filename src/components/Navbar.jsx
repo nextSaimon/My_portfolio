@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Use this for client-side navigation in the app directory
-import AnimatedContent from "../assets/AnimatedContent/AnimatedContent";
-import FadeContent from "../assets/FadeContent/FadeContent";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

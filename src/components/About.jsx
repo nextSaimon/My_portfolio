@@ -3,9 +3,9 @@ import { FaGraduationCap } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
 import Image from "next/image";
 import React from "react";
-import about_img from "@/public/about-pic.jpg";
-import AnimatedContent from "./../assets/AnimatedContent/AnimatedContent";
-import FadeContent from "../assets/FadeContent/FadeContent";
+import about_img from "../../public/about-pic.jpg";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 // Function to calculate the age
 const calculateAge = (birthDate) => {
@@ -76,7 +76,7 @@ const About = () => {
             />
           </FadeContent>
         </div>
-        <div className="about-details-container">
+        <div className="about-details-container items-center">
           <AnimatedContent
             distance={150}
             direction="vertical"
@@ -90,8 +90,11 @@ const About = () => {
             delay={0}
           >
             <div className="about-containers mx-auto">
-              <div className="details-container text-center ">
-                <i className="fas fa-briefcase icon">
+              <div className="details-container text-center flex flex-col">
+                <i
+                  className="fas fa-briefcase icon mx-auto "
+                  style={{ margin: "auto" }}
+                >
                   <FaBriefcase className="mx-auto" />
                 </i>
                 <h3>Experience</h3>
@@ -100,8 +103,11 @@ const About = () => {
                   Full Stack Development <br /> Other skill+
                 </p>
               </div>
-              {/* <div className="details-container">
-                <i className="fas fa-graduation-cap icon">
+              {/* <div className="details-container flex flex-col">
+                <i
+                  className="fas fa-graduation-cap icon"
+                  style={{ margin: "auto" }}
+                >
                   <FaGraduationCap className="mx-auto" />
                 </i>
                 <h3>Education</h3>

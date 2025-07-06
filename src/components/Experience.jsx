@@ -17,8 +17,8 @@ import {
   faImage,
   faBezierCurve,
 } from "@fortawesome/free-solid-svg-icons";
-import AnimatedContent from "../assets/AnimatedContent/AnimatedContent";
-import FadeContent from "../assets/FadeContent/FadeContent";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 const Experience = () => {
   const frontendSkills = [
@@ -164,56 +164,74 @@ const Experience = () => {
 
       <div className="experience-details-container">
         <div className="about-containers justify-center">
-          <div className="details-container max-w-[600px]">
-            <AnimatedContent
-              distance={150}
-              direction="horizontal"
-              reverse={false}
-              duration={1.2}
-              ease="bounce.out"
-              initialOpacity={0.2}
-              animateOpacity
-              scale={0.3}
-              threshold={0.2}
-              delay={0}
-            >
-              <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                initialOpacity={0}
+          <FadeContent
+            blur={true}
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <div className="details-container max-w-[600px]">
+              <AnimatedContent
+                distance={150}
+                direction="horizontal"
+                reverse={false}
+                duration={1.2}
+                ease="bounce.out"
+                initialOpacity={0.2}
+                animateOpacity
+                scale={0.3}
+                threshold={0.2}
+                delay={0}
               >
-                <h2 className="experience-sub-title">Frontend Development</h2>
-              </FadeContent>
-            </AnimatedContent>
-            <div className="article-container">
-              {renderSkills(frontendSkills)}
+                <FadeContent
+                  blur={true}
+                  duration={1000}
+                  easing="ease-out"
+                  initialOpacity={0}
+                >
+                  <h2 className="experience-sub-title">Frontend Development</h2>
+                </FadeContent>
+              </AnimatedContent>
+              <div className="article-container">
+                {renderSkills(frontendSkills)}
+              </div>
             </div>
-          </div>
-          <div className="details-container max-w-[600px]">
-            <AnimatedContent
-              distance={150}
-              direction="horizontal"
-              reverse={false}
-              duration={1.2}
-              ease="bounce.out"
-              initialOpacity={0.2}
-              animateOpacity
-              scale={0.3}
-              threshold={0.2}
-              delay={0}
-            >
-              <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                initialOpacity={0}
+          </FadeContent>
+          <FadeContent
+            blur={true}
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            {" "}
+            <div className="details-container max-w-[600px]">
+              <AnimatedContent
+                distance={150}
+                direction="horizontal"
+                reverse={false}
+                duration={1.2}
+                ease="bounce.out"
+                initialOpacity={0.2}
+                animateOpacity
+                scale={0.3}
+                threshold={0.2}
+                delay={0}
               >
-                <h2 className="experience-sub-title">Other Skills</h2>
-              </FadeContent>
-            </AnimatedContent>
-            <div className="article-container">{renderSkills(otherSkills)}</div>
-          </div>
+                <FadeContent
+                  blur={true}
+                  duration={1000}
+                  easing="ease-out"
+                  initialOpacity={0}
+                >
+                  <h2 className="experience-sub-title">Other Skills</h2>
+                </FadeContent>
+              </AnimatedContent>
+
+              <div className="article-container">
+                {renderSkills(otherSkills)}
+              </div>
+            </div>
+          </FadeContent>
         </div>
       </div>
     </section>

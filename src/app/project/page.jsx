@@ -1,17 +1,17 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Button from "../components/button";
-import AnimatedContent from "../assets/AnimatedContent/AnimatedContent";
-import FadeContent from "../assets/FadeContent/FadeContent";
+import Button from "@/components/button";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 // import project image
-import project1 from "../../public/project-1.png";
-import project2 from "../../public/project-2.png";
-import project3 from "../../public/project-3.png";
-import project4 from "../../public/project-4.png";
-import project5 from "../../public/project-5.png";
-import project6 from "../../public/project-6.png";
+import project1 from "@/../public/project-1.png";
+import project2 from "@/../public/project-2.png";
+import project3 from "@/../public/project-3.png";
+import project4 from "@/../public/project-4.png";
+import project5 from "@/../public/project-5.png";
+import project6 from "@/../public/project-6.png";
 
 const Project = () => {
   const projects = [
@@ -77,8 +77,11 @@ const Project = () => {
           <h1 className="title">Projects</h1>
         </FadeContent>
       </AnimatedContent>
-      <div className="container my-5 mx-auto">
-        <div className="flex justify-center flex-wrap gap-3 w-full max-w-5xl mx-auto relative">
+      <div className="container" style={{ margin: "auto" }}>
+        <div
+          className="flex justify-center flex-wrap gap-3 w-full max-w-5xl relative"
+          style={{ margin: "auto" }}
+        >
           {projects.map((project, index) => (
             <div className="w-full max-w-xs" key={index}>
               <AnimatedContent
@@ -94,10 +97,10 @@ const Project = () => {
                 delay={0}
               >
                 <div className="card shadow" style={{ width: "100%" }}>
-                  <div className="img">
+                  <div className="img overflow-hidden">
                     {project.img && (
                       <Image
-                        className="card-img-top"
+                        className="card-img-top hover:scale-105 transition-all ease-in-out duration-300"
                         src={project.img}
                         alt={project.title}
                         width={500}
@@ -110,7 +113,7 @@ const Project = () => {
 
                   <div className="card-body text-center mt-2">
                     <h4 className="card-title text-[23px]">{project.title}</h4>
-                    <div className="space-x-2">
+                    <div className="flex justify-center gap-2">
                       {project.github && (
                         <Button
                           text="GitHub"
@@ -123,7 +126,7 @@ const Project = () => {
                         <Button
                           text="Live Demo"
                           link={project.demo}
-                          className="border-[1px] px-2 py-1 w-[100px] hover:text-white hover:bg-gray-900 hover:shadow transition-all ease-in-out duration-300"
+                          className="border-[1px] px-2 py-1 w-[100px] hover:text-white hover:bg-gray-900 hover:shadow transition-all ease-in-out duration-300 "
                           style={{ borderRadius: 50 }}
                         />
                       )}

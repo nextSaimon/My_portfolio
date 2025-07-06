@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
 import SocialIcons from "./SocialIcons";
-import profile_img from "@/public/profile-pic.jpg";
+import profile_img from "../../public/profile-pic.jpg";
 import Image from "next/image";
-import AnimatedContent from "./../assets/AnimatedContent/AnimatedContent";
-import FadeContent from "../assets/FadeContent/FadeContent";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 const Profile = () => {
+
   const m_b1_1 = () => {
     const btn1 = document.getElementById("btn1");
     btn1.style.color = "white";
@@ -47,7 +48,7 @@ const Profile = () => {
     setTimeout(() => {
       document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
     }, 100);
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   return (

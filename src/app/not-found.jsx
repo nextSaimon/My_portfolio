@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import FallingText from "./assets/FallingText/FallingText";
-import DecryptedText from "./assets/DecryptedText/DecryptedText";
+import FallingText from "@/styles/FallingText/FallingText";
+import DecryptedText from "@/styles/DecryptedText/DecryptedText";
 
 export default function Custom404() {
   return (
