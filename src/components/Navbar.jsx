@@ -107,9 +107,7 @@ const Navbar = () => {
 
               <ul
                 className={`menu-links ${
-                  isMenuOpen
-                    ? "open  border border-gray-400 rounded-[10px]"
-                    : ""
+                  isMenuOpen ? "open  border border-gray-400" : ""
                 }`}
               >
                 <li>
