@@ -122,11 +122,11 @@ const About = () => {
             <div className="text-container">
               <p>It&apos;s me......</p>
               <h1> Saimon 🙋‍♂️</h1>
-              <p>💻 A junior frontend developer. 🌐</p>
+              <p>💻 A junior Full Stack developer. 🌐</p>
               <p>🧭 I live in Dhaka, Bangladesh.</p>
-              <p>
+              {/* <p>
                 ⌛ I am <b>{age}</b> years old.
-              </p>
+              </p> */}
               <p>
                 🤓 I am learning 🌐 Web Development, and I can also edit 📷
                 photos, 📽️ videos, Word, Excel, etc.
