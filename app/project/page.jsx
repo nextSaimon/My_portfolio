@@ -78,7 +78,7 @@ const Project = () => {
         </FadeContent>
       </AnimatedContent>
       <div className="container my-5 mx-auto">
-        <div className="flex justify-center flex-wrap gap-3 w-full max-w-5xl mx-auto relative z-[-1]">
+        <div className="flex justify-center flex-wrap gap-3 w-full max-w-5xl mx-auto relative">
           {projects.map((project, index) => (
             <div className="w-full max-w-xs" key={index}>
               <AnimatedContent
