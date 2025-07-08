@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "@/styles/css/contact-form.css";
 import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
-import FadeContent from "@/styles/FadeContent/FadeContent";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,7 +47,6 @@ export default function ContactForm() {
     } catch (error) {
       setErrorMessage("Oops! Something went wrong. Please try again.");
       setShowError(true);
-      console.error("Form error:", error);
     } finally {
       setIsSubmitting(false);
     }

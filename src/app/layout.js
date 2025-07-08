@@ -1,5 +1,6 @@
 import "@/styles/css/style.css";
 import "@/styles/css/mediaqueries.css";
+import "@/styles/css/contact-form.css";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
