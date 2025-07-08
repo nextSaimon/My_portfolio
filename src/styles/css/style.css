@@ -52,14 +52,16 @@ p {
 
 .fa-facebook,
 .fa-instagram,
-.fa-github {
+.fa-github,
+.email-icon {
   transition: transform 0.3s ease;
   /* Controls the duration and easing */
 }
 
 .fa-facebook:hover,
 .fa-instagram:hover,
-.fa-github:hover {
+.fa-github:hover,
+.email-icon:hover {
   transform: scale(1.2);
   /* Scale effect on hover */
 }

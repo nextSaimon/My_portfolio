@@ -4,6 +4,7 @@ import { BsFacebook } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import React from "react";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
 import FadeContent from "@/styles/FadeContent/FadeContent";
 
@@ -59,10 +60,14 @@ const Contact = () => {
           </div>
         </div>
       </AnimatedContent>
+
+      <div className="contact-info-container z-50">
+        <ContactForm />
+      </div>
       <AnimatedContent
         distance={150}
         direction="horizontal"
-        reverse={false}
+        reverse={true}
         duration={1.2}
         ease="bounce.out"
         initialOpacity={0.2}
