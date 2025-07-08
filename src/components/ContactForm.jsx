@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import "@/styles/css/contact-form.css";
+import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
+import FadeContent from "@/styles/FadeContent/FadeContent";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,9 +61,23 @@ export default function ContactForm() {
 
   return (
     <>
-      <button className="_btn-connect" onClick={() => setIsModalOpen(true)}>
-        Send a Message....
-      </button>
+      <AnimatedContent
+        distance={150}
+        direction="horizontal"
+        reverse={false}
+        duration={1.2}
+        ease="bounce.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={0.3}
+        threshold={0.2}
+        delay={0}
+        Zindex={false}
+      >
+        <button className="_btn-connect" onClick={() => setIsModalOpen(true)}>
+          Send a Message....
+        </button>
+      </AnimatedContent>
 
       {/* Contact Form Modal */}
       {isModalOpen && (
