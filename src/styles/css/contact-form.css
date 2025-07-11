@@ -201,6 +201,7 @@
   border: 2px solid #a3a3a3;
   text-decoration: none;
   text-decoration-color: white;
+  cursor: pointer;
 }
 
 ._btn-connect:hover {
