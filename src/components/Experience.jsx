@@ -1,22 +1,19 @@
 "use client";
+import { SiJavascript } from "react-icons/si"; 
+import { FaRegFilePowerpoint } from "react-icons/fa";
+import { BsFillFileEarmarkWordFill } from "react-icons/bs";
+import { SiAdobeillustrator } from "react-icons/si";
+import { FaPython } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { BsFillBootstrapFill } from "react-icons/bs";
+import { SiTailwindcss } from "react-icons/si";
+import { DiReact } from "react-icons/di";
+import { DiCss3 } from "react-icons/di";
+import { AiFillHtml5 } from "react-icons/ai";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3Alt,
-  faJsSquare,
-  faReact,
-  faBootstrap,
-  faGithub,
-  faPython,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faTable,
-  faFileWord,
-  faFilePowerpoint,
-  faImage,
-  faBezierCurve,
-} from "@fortawesome/free-solid-svg-icons";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { RiFileExcel2Line } from "react-icons/ri";
 import AnimatedContent from "@/styles/AnimatedContent/AnimatedContent";
 import FadeContent from "@/styles/FadeContent/FadeContent";
 
@@ -25,89 +22,89 @@ const Experience = () => {
     {
       name: "HTML",
       level: "Experienced",
-      icon: <FontAwesomeIcon icon={faHtml5} />,
+      icon: <AiFillHtml5 />,
       class: "fa-brands fa-html5",
     },
     {
       name: "CSS",
       level: "Experienced",
-      icon: <FontAwesomeIcon icon={faCss3Alt} />,
+      icon: <DiCss3 />,
       class: "fa-brands fa-css3",
     },
     {
       name: "JavaScript",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faJsSquare} />,
+      icon: <SiJavascript />,
       class: "fa-brands fa-js",
     },
     {
       name: "React",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faReact} />,
+      icon: <DiReact />,
       class: "fa-brands fa-react",
     },
     {
       name: "NextJS",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faReact} />, // No specific Next.js icon; using React icon
+      icon: <SiNextdotjs />,
       class: "fa-brands fa-react",
     },
     {
       name: "TailwindCSS",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faCss3Alt} />, // No Tailwind CSS icon; using CSS icon
+      icon: <SiTailwindcss />,
       class: "fa-brands fa-react",
     },
     {
       name: "Bootstrap",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faBootstrap} />,
+      icon: <BsFillBootstrapFill />,
       class: "fa-brands fa-bootstrap",
     },
     {
       name: "Git",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faGithub} />,
+      icon: <AiFillGithub />,
       class: "fa-solid fa-code-branch",
     },
   ];
 
   const otherSkills = [
     {
+      name: "Python",
+      level: "Intermediate",
+      icon: <FaPython />,
+      class: "fa-brands fa-python",
+    },
+    {
       name: "Photoshop",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faImage} />, // Generic image icon for Photoshop
+      icon: <SiAdobephotoshop />,
       class: "fa-regular fa-image",
     },
     {
       name: "Illustrator",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faBezierCurve} />, // Bezier curve for Illustrator
+      icon: <SiAdobeillustrator />,
       class: "fa-solid fa-bezier-curve",
     },
     {
       name: "Excel",
       level: "Experienced",
-      icon: <FontAwesomeIcon icon={faTable} />, // Table icon for Excel
+      icon: <RiFileExcel2Line />,
       class: "fa-solid fa-table",
     },
     {
       name: "Word",
       level: "Experienced",
-      icon: <FontAwesomeIcon icon={faFileWord} />,
+      icon: <BsFillFileEarmarkWordFill />,
       class: "fa-regular fa-file-word",
     },
     {
       name: "PowerPoint",
       level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faFilePowerpoint} />,
+      icon: <FaRegFilePowerpoint />,
       class: "fa-solid fa-file-powerpoint",
-    },
-    {
-      name: "Python",
-      level: "Intermediate",
-      icon: <FontAwesomeIcon icon={faPython} />,
-      class: "fa-brands fa-python",
     },
   ];
 
@@ -189,7 +186,7 @@ const Experience = () => {
                   easing="ease-out"
                   initialOpacity={0}
                 >
-                  <h2 className="experience-sub-title">Frontend Development</h2>
+                  <h2 className="experience-sub-title">Full-Stack Development</h2>
                 </FadeContent>
               </AnimatedContent>
               <div className="article-container">
