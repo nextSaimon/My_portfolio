@@ -1,40 +1,21 @@
 "use client";
 import Link from "next/link";
-import FallingText from "@/styles/FallingText/FallingText";
 import DecryptedText from "@/styles/DecryptedText/DecryptedText";
 
 export default function Custom404() {
   return (
-    <div className="relative h-screen w-full bg-white flex items-center justify-center overflow-hidden">
-      {/* Falling Text Overlay */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
-        <div className="w-full h-full z-[900]">
-          <FallingText
-            text={`Oops! Looks like this page got lost in cyberspace... 404 !`}
-            highlightWords={["Oops", "404", "React Bits", "Page Not Found"]}
-            highlightClass="text-cyan-500 font-bold"
-            trigger="auto"
-            backgroundColor="transparent"
-            wireframes={false}
-            gravity={0.01}
-            fontSize="1.8rem"
-            mouseConstraintStiffness={0.9}
-          />
-        </div>
-      </div>
-
-      {/* Not Found Box Below */}
-      <div className="relative z-20 max-w-md w-full p-8 bg-gray-100 shadow-2xl rounded-2xl text-center">
-        <h1 className="text-6xl font-extrabold text-indigo-600">404</h1>
+    <div className="__container">
+      <div className="__box">
+        <h1 className="__title">404</h1>
         <DecryptedText
-          text="Oops! This page doesn&#39;t exist."
+          text="Oops! This page doesn't exist."
           speed={30}
           maxIterations={150}
           revealDirection="center"
           characters="!@#$%^&*()"
           animateOn="view"
-          className="mt-4 text-lg text-gray-600"
-          parentClassName="relative"
+          className="__text"
+          parentClassName="__parent"
           sequential={true}
         />
         <br />
@@ -46,17 +27,73 @@ export default function Custom404() {
           revealDirection="center"
           characters="!@#$%^&*()"
           animateOn="view"
-          className="mt-4 text-lg text-gray-600"
-          parentClassName="relative"
+          className="__text"
+          parentClassName="__parent"
           sequential={true}
         />
-        <Link
-          href={"/"}
-          className="mt-6 inline-block px-6 py-3 text-white font-semibold bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all duration-300"
-        >
+        <Link href="/" className="__button">
           Go back to Home
         </Link>
       </div>
+
+      <style jsx>{`
+        .__container {
+          position: relative;
+          width: 100%;
+          height: 50vh;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+
+        .__box {
+          position: relative;
+          z-index: 20;
+          width: 100%;
+          max-width: 28rem;
+          padding: 2rem;
+          background-color: #f3f4f6;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          border-radius: 1.5rem;
+          text-align: center;
+          height: 300px;
+        }
+
+        .__title {
+          font-size: 4rem;
+          font-weight: 800;
+          color: #4f46e5;
+          margin: 0;
+        }
+
+        .__text {
+          margin-top: 1rem;
+          font-size: 1.125rem;
+          color: #4b5563;
+        }
+
+        .__button {
+          display: inline-block;
+          margin-top: 1.5rem;
+          padding: 0.75rem 1.5rem;
+          color: white;
+          font-weight: 600;
+          background-color: #4f46e5;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .__button:hover {
+          background-color: #4338ca;
+        }
+
+        .__parent {
+          position: relative;
+        }
+      `}</style>
     </div>
   );
 }
