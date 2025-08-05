@@ -80,7 +80,7 @@ const Project = () => {
       <div className="container zzzz" style={{ margin: "auto" }}>
         <div
           className="flex justify-center flex-wrap gap-3 w-full max-w-5xl relative"
-          style={{ margin: "auto" }}
+          style={{ margin: "auto", padding: "5px" }}
         >
           {projects.map((project, index) => (
             <div className="w-full max-w-xs" key={index}>
